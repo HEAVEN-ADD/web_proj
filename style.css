@@ -45,6 +45,18 @@
   transition: 0.3s;
 }
 
+.hamburger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.toggle .line2 {
+  opacity: 0;
+}
+
+.hamburger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
 .home {
   display: flex;
   flex-direction: column;
@@ -149,5 +161,9 @@
     width: 70%;
     font-size: 20px;
     margin-top: 8%;
+  }
+
+  .navbar {
+    justify-content: end;
   }
 }
