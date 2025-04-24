@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Contact-page">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <div class="home">
+        <h1 class="home-text_1" id="home-text_title">Hey there. I'm Heaven Addis.</h1>
+        <h1 class="home-text_2" id="home-text_title">I'm a software developer</h1>
+        <p>I can help you build a product, feature, or website. Look through some of my work and <br>
+            experience! If you like what you see and have a project you need coded, <br>
+            don’t hesitate to contact me.</p> <br><br><br>
+        <div class="icons">
+            <a href="https://www.github.com"><img src="/Images/Github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com"><img src="/Images/Linkedin.png" alt="Linkedin"></a>
+            <a href="https://www.Peace.com"><img src="/Images/Peace.png" alt="Peace"></a>
+            <a href="https://www.x.com"><img src="/Images/Twitter.png" alt="Twitter"></a>
+            <a href="https://www.moodles.com"><img src="/Images/M.png" alt="M"></a>
+        </div> <br><br><br> <br>
+        <button id="drop" class="drop" type="button"><img src="/Images/Drop.png" alt="Drop"></button>
+        <br><br><br>
+    </div>
+</body>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('toggle');
+        navLinks.classList.toggle('active');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
+</html>
