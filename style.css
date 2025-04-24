@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.navbar {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links a:hover {
+  color: yellow;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: black;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: url(/Images/home_img.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.home-text_1 {
+  color: #172b4d; /* Fixed hex color case */
+}
+
+.home-text_2 {
+  color: #36b37e; /* Fixed hex color case */
+}
+
+#home-text_title {
+  font-family: Inter, sans-serif; /* Added generic font family */
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.37px;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  height: 50px;
+  gap: 10px;
+}
+
+.drop {
+  width: 3.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+@media screen and (max-width: 768px) {
+  
+    /* Other mobile-specific styles */
+    .nav-links {
+        position: absolute;
+        right: 0px  ;
+        top: 60px;
+        background-color: white;
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+        display: none;
+    }
+  
+    .nav-links a {
+        color: black;
+        text-decoration: none;
+        font-size: 2.2rem;
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+  
+    .hamburger.active .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .hamburger.active .line2 {
+        opacity: 0;
+    }
+  
+    .hamburger.active .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    #home-text_title {
+        font-family: Inter, sans-serif;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: 0.37px;
+        text-align: center;
+    }
+    .home{
+        margin: auto;
+    }
+    p{ 
+        width: 70%;
+        font-size: 20px;
+        margin-top: 8%;
+    }
+}
+  
